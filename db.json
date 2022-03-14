@@ -1,0 +1,84 @@
+{
+    "property_list": [
+      { "id": 1, 
+        "name": "Condos", 
+        "description": "The list of condos is shown, Have a look!",
+      "list" :[
+        {
+          "id":1,"name":"Oliver","price":143.45,"address": "61 street avenue east","img" :"img1" 
+        }, {
+          "id":2,"name":"Windermere","price":128.00,"address": "Westmount road","img" :"img1"  
+        }, {
+          "id":3,"name":"Hyndman CR","price":132.45,"address": "Crestwood hills","img" :"img1"  
+        }, {
+          "id":4,"name":"Adamson NW","price":145.45,"address": "Parkview","img" :"img1"  
+        }, {
+          "id":5,"name":"Jasper AV","price":160.00,"address": "Belle Rive","img" :"img1"  
+        },{
+          "id":6,"name":"Woodstock","price":140.50,"address": "70 sherwood street","img" :"img1"  
+        }
+      ] },{
+         "id": 2, 
+          "name": "Resorts", 
+          "description": "The list of Resorts is shown, Have a look!",
+        "list" :[
+          {
+            "id":1,"name":"Ayada Resorts","price":134.20,"address": "61 street avenue east","img" :"img1"  
+          }, {
+            "id":2,"name":"Trip Villa","price":128.45,"address": "Westmount road","img" :"img1"  
+          }, {
+            "id":3,"name":"Arena Water Resorts","price":130.00,"address": "Crestwood hills","img" :"img1"  
+          }, {
+            "id":4,"name":"Aurora Resorts","price":139.50,"address": "Parkview","img" :"img1"  
+          }, {
+            "id":5,"name":"Riveria Resorts","price":140.45,"address": "70 sherwood street","img" :"img1"  
+          }
+        ] 
+  
+      },{
+        "id": 3, 
+         "name": "Apartments", 
+         "description": "The list of apartment is shown, Have a look!",
+       "list" :[
+         {
+           "id":1,"name":"Coast plaza","price":140.00,"address": "61 street avenue east","img" :"img1"  
+         }, {
+           "id":2,"name":"Ramada apartment","price":179.60,"address": "Westmount road","img" :"img1"  
+         }, {
+           "id":3,"name":"Chateau apartment","price":168.50,"address": "Crestwood hills","img" :"img1"  
+         }, {
+           "id":4,"name":"Hyatt place","price":125.45,"address": "Parkview","img" :"img1"  
+         }, {
+           "id":5,"name":"Edmonton plaza","price":134.80,"address": "Belle Rive","img" :"img1"  
+         }
+       ] 
+  
+     },{
+      "id": 4, 
+       "name": "Hotel", 
+       "description": "The list of hotel is shown, Have a look!",
+     "list" :[
+       {
+         "id":1,"name":"Fantasyland","price":125.01,"address": "61 street avenue east","img" :"img1"  
+       }, {
+         "id":2,"name":"PleasantView","price":126.02,"address": "Westmount road","img" :"img1"  
+       }, {
+         "id":3,"name":"Sunshine Hotel","price":127.03,"address": "Crestwood hills","img" :"img1"  
+       }, {
+         "id":4,"name":"Radisson Hotel","price":128.04,"address": "Parkview","img" :"img1"  
+       }, {
+         "id":5,"name":"Fairmont Hotel Macdonald","price":129.05,"address": "Belle Rive","img" :"img1"  
+       }
+     ] 
+  
+   }
+    ],
+  
+    "best_seller" :[
+      {"id" : 1,"address" : "70 street avenue","name" : "MeadowsResort", "price" : 160.05},
+      {"id" : 2,"address" : "43 street avenue","name" : "SummersideCondo","price" : 132.03},
+      {"id" : 3,"address" : "52 street avenue","name" : "MilwoodsHotel","price" : 150.01},
+      {"id" : 4,"address" : "61 street avenue","name" : "Sherwoods park Apartments","price" : 124.00}
+    ]
+   
+  }
