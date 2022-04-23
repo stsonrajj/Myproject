@@ -10,16 +10,24 @@ import { useParams } from 'react-router-dom';
 
 const SortedPropertyPage = () => {
   let params = useParams();
-  const [data,setData] = useState([{"id":0,
-  name: "",
-  description : "",
-  list :[]
+  const[data,setData] = useState("")
+  const [data1,setData1] = useState([{ id: "",
+  img: "",
+  title: "",
+  description: "",
+  price: "",
+  city: "",
+  state: "",
+  address: "",
+  type: "",
+  rules: "",
+  amenities: "",
+  bestseller: true
 }
 ])
 useEffect(()=>{
-  fetch("http://localhost:5000/property_list").then(response => response.json()).then(json=>{
-    let data1 = json.filter((element)=> element.id == parseInt(params.id))
-    setData(data1);
+  fetch("http://localhost:5001/properties/"+params.id).then(response => response.json()).then(json=>{
+    setData1(json);
   }).catch(err=>{
     console.log(err);
   })
@@ -27,10 +35,10 @@ useEffect(()=>{
 },[])
   return (
     <div>
-      <Header />
+      <Header  setData={setData}/>
       <div className='p1'>
           <Sort />
-      <SortedProperty data = {data} />
+      <SortedProperty data = {data1} />
       </div>
       
       <Footer />

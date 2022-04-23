@@ -2,35 +2,41 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import List from '../components/List';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const ListPage = () => {
   let temp = [];
   let count = 0;
-  const [data,setData] = useState([{"id":0,
-name: "",
-description : "",
-list :[]
-}
-])
-useEffect(()=>{
-  fetch("http://localhost:5000/property_list").then(response => response.json()).then(json=>{
-          json.forEach(element => {
-         element.list.forEach(element1 => {
-             temp.push(element1);
-         });
-      });
-    setData(temp);
+  let params = useParams();
+  const [data, setData] = useState([{
+    id: "",
+    img: "",
+    title: "",
+    description: "",
+    price: "",
+    city: "",
+    state: "",
+    address: "",
+    type: "",
+    rules: "",
+    amenities: "",
+    bestseller: true
+  }])
 
-  }).catch(err=>{
-    console.log(err);
-  })
-  
-},[])
+  useEffect(() => {
+    let url = (params.variable)?"http://localhost:5001/properties/"+params.variable:"http://localhost:5001/properties"
+    fetch(url).then(response => response.json()).then(json => {
+      console.log('aaaaaaaaaaaaaaaa',json);
+      setData(json)
+    }).catch(err => {
+      console.log(err);
+    })
+  }, [])
   return (
     <div>
-      <Header />
-      <List data = {data}  />
+      <Header setData={setData} />
+      <List data={data} />
       <Footer />
     </div>
   );

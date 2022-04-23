@@ -17,6 +17,7 @@ import PropertyPage from './webpages/PropertyPage';
 import PropertyDescription from './components/PropertyDescription';
 import LogIn from './components/LogIn';
 import Registration from './components/Registration';
+import { DashBoard } from './webpages/DashBoard';
 import {
   BrowserRouter,
   Routes,
@@ -33,10 +34,10 @@ function App() {
       <Route path="login" element={<LogIn />} />
       <Route path="sign-up" element={<Registration />} />
       <Route path="propertylisting" element={<ListPage />} />
+      <Route path="propertylisting/:variable" element={<ListPage />} />
       <Route path="propertysorting/:id" element={<SortedPropertyPage />} />
       <Route path="description/:name" element={<PropertyDescriptionPage />} />
-
-      
+      <Route path="/dashboard" element={<DashBoard/>} />
     </Routes>
   </BrowserRouter>
   {/* <PropertyDescriptionPage /> */}

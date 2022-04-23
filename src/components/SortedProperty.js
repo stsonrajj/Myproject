@@ -45,7 +45,7 @@ const SortedProperty = (props) => {
             </div>
             <div className='r'>
                
-            {props.data[0].list?.map((element, key) => (
+            {props.data?.map((element, key) => (
                     <div key={key}>
                         <Item element={element}/>
                     </div>
